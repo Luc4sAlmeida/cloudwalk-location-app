@@ -2,10 +2,10 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
 /*
- * Classe requerida para criar qualquer Widget utilizando BloC 
- * O motivo de // ignore nas funções abaixo é por conta de extrema necessidade
- * de chamar os métodos para sua inicialização independente mas não devem ser 
- * utilizar fora da própria classe.
+ * Required class to create any widget with BloC
+ * the reason behind all those //ignores is that this functions is of extreme
+ * necessity for the execute flow of BloC.
+ * But should not be used out of here.
  * */
 class BlocScreenBuilder extends StatefulWidget {
   final BloC bloc;

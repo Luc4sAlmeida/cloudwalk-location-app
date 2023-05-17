@@ -2,6 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+/*
+* This class should be only used with BlocScreenBuilder combinated
+* don't used it without it because some methods depends on it to be executed.
+*/
 abstract class BloC<Event, State> {
   late StreamController<State> _stateController;
   late StreamController<Event> _eventController;
