@@ -1,13 +1,25 @@
 import 'dart:async';
 
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+
+/*
+ * Should be extended, not implemented. 
+ */
+abstract class BloCEvent extends Equatable {}
+
+/*
+ * Should be extended, not implemented. 
+ */
+abstract class BloCState extends Equatable {}
 
 /*
 * This class should be only used with BlocScreenBuilder combinated
 * don't used it without it because some methods depends on it to be executed.
 */
-abstract class BloC<Event, State> {
+abstract class BloC<Event extends BloCEvent, State extends BloCState> {
   late StreamController<State> _stateController;
+
   late StreamController<Event> _eventController;
   late StreamSubscription<Event> _eventListener;
 

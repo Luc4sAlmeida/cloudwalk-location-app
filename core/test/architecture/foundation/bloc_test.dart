@@ -3,19 +3,22 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_test/flutter_test.dart';
 
-// Events
-abstract class Event {}
+class IncrementEvent extends BloCEvent {
+  @override
+  List<Object?> get props => [];
+}
 
-class IncrementEvent implements Event {}
+class EmptyState extends BloCState {
+  @override
+  List<Object?> get props => [];
+}
 
-// States
-abstract class State {}
+class StableState extends BloCState {
+  @override
+  List<Object?> get props => [];
+}
 
-class EmptyState implements State {}
-
-class StableState implements State {}
-
-class MockBloC extends BloC<Event, State> {
+class MockBloC extends BloC {
   bool onInitOk = false;
   bool onReadyOk = false;
 
@@ -32,7 +35,7 @@ class MockBloC extends BloC<Event, State> {
   }
 
   @override
-  void onEvent(Event event) {
+  void onEvent(BloCEvent event) {
     if (event is IncrementEvent) {
       emit(StableState());
     }
