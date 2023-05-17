@@ -1,9 +1,6 @@
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-abstract class RouterAdapter {
-  Map<String, MaterialPageRoute> getRoutes(RouteSettings settings);
-}
 
 class TestRouterAdapter extends RouterAdapter {
   @override
