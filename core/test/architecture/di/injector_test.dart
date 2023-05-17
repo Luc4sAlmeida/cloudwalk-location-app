@@ -8,7 +8,8 @@ void main() {
     late Injector injector;
 
     setUp(() {
-      injector = SimpleInjector();
+      // Same implementation as SimpleInjector but is not an Singleton
+      injector = WeakInjector();
     });
 
     test('put and get should store and retrieve a value', () {
@@ -31,7 +32,7 @@ void main() {
       final secondValue = injector.get<TestClass>();
       expect(secondValue, isA<TestClass>());
 
-      expect(firstValue.hashCode != secondValue.hashCode, isTrue);
+      expect(identical(firstValue, secondValue), isFalse);
     });
 
     test('clear should remove a stored value', () {

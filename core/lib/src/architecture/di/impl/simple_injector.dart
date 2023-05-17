@@ -10,14 +10,18 @@ class ComposedType {
   });
 }
 
-class SimpleInjector implements Injector {
+class SimpleInjector extends _InternalInjector {
   static final SimpleInjector _instance = SimpleInjector._internal();
   SimpleInjector._internal();
 
   factory SimpleInjector() {
     return _instance;
   }
+}
 
+class WeakInjector extends _InternalInjector {}
+
+class _InternalInjector implements Injector {
   final Map<ComposedType, dynamic> map = {};
 
   @override
