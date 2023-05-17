@@ -11,11 +11,12 @@ A proposta da arquitetura desse projeto é dividir o máximo possível as camada
 
 + Multimodular escalável.
 + Clean Architecture e seus testes unitários em todas camadas.
-+ Boas praticas de uso do Git, (Git Flow, Attomic commits, Semmantic commits).
++ Boas praticas de uso do Git. (Git Flow, Atommic commits, Semmantic commits)
 
 ## Futuras melhorias
-+ Implementação robusta de navegação entre as features (módulos).
-+ Criar repositório core-ui para criação de compontes compartilhados entre features (módulos).
++ Implementação robusta de navegação entre as features.
++ Adicionar Git Workflows para garantia da integridade e saúde do projeto.
++ Criar repositório core-ui para criação de componentes compartilhados entre features.
 
 
 ## Arquitetura multimodular
@@ -70,8 +71,9 @@ Caso for testar o aplicativo em iOS e estiver com uma máquina Apple com arquite
 
 1. Abrir seu terminal
 2. Ir até a pasta do seu projeto
-3. Acessar pasta iOS
-4. Executar o comando
+3. Acessar a a pasta client
+4. Acessar pasta iOS
+5. Executar o comando
 
 ```bash
 arch --x86_64 pod install --repo-update
