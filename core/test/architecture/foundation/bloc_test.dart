@@ -47,13 +47,13 @@ class MockBloC extends BloC {
 }
 
 void main() {
+  late MockBloC bloc;
+
+  setUp(() {
+    bloc = MockBloC();
+  });
+
   group('Bloc', () {
-    late MockBloC bloc;
-
-    setUp(() {
-      bloc = MockBloC();
-    });
-
     test('onInit should be executed', () {
       expect(bloc.onInitOk, isTrue);
     });

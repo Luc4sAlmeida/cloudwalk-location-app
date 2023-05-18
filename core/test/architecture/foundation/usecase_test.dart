@@ -1,6 +1,6 @@
 import 'package:core/core.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 
 class MockUseCase extends Mock implements UseCase<String, int> {
   @override
@@ -13,13 +13,13 @@ class MockUseCase extends Mock implements UseCase<String, int> {
 }
 
 void main() {
+  late MockUseCase useCase;
+
+  setUp(() {
+    useCase = MockUseCase();
+  });
+
   group('UseCase', () {
-    late MockUseCase useCase;
-
-    setUp(() {
-      useCase = MockUseCase();
-    });
-
     test('Call with valid params should return Right with output', () async {
       const params = 'success';
       const expectedOutput = 42;
