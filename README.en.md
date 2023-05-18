@@ -1,4 +1,6 @@
 ## cloudwalk-location-app
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Luc4sAlmeida/cloudwalk-location-app#readme)
+
 <p align="center">
   <img src="https://i.imgur.com/GWsaTdW.png">
   <img src="https://i.imgur.com/OhLB6Iq.gif">
