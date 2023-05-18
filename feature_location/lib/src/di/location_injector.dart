@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:feature_location/src/src.dart';
+import 'package:navigator/navigator.dart';
 
 class LocationInjector implements InjectorAdapter {
   @override
@@ -41,6 +42,9 @@ class LocationInjector implements InjectorAdapter {
     injector.put<GetCurrentPositionUseCase>(
       GetCurrentPositionUseCase(repository: injector.get()),
     );
+
+    // Navigator
+    injector.put<LocationNavigator>(LocationNavigatorImpl());
 
     // Bloc
     injector.putFactory(
