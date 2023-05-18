@@ -1,5 +1,6 @@
-## cloudwalk-location-app
-Este projeto é um projeto com diversos testes tanto de arquitetura de aplicativo mobile quanto de práticas técnicas.
+
+## cloudwalk-location-app 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Luc4sAlmeida/cloudwalk-location-app/blob/main/README.en.md)
 
 <p align="center">
   <img src="https://i.imgur.com/GWsaTdW.png">
@@ -10,33 +11,33 @@ Este projeto é um projeto com diversos testes tanto de arquitetura de aplicativ
 
 Para fins de apresentação, utilizei um **monorepo** com todos os repositórios necessários.
 
-A proposta da arquitetura desse projeto é dividir o máximo possível as camadas e funcionalidades, a intenção é um fluxo de trabalho melhor e sem conflitos entre times pequenos.
+A proposta da arquitetura desse projeto é dividir o máximo possível as camadas e funcionalidades, a intenção é um fluxo de trabalho melhor e sem conflitos entre desenvolvedores ou equipes.
 
-Pelo pouco tempo para conclusão desse projeto não foi possível ser fiel ao **Gitflow** para conclusão das tarefas, sendo assim. Será feito um exemplo de [#Issue](/../../issues/1) para demonstração de conhecimento.
+Pelo pouco tempo para conclusão desse projeto não foi possível ser fiel ao **GitFlow** para conclusão das tarefas, sendo assim, será feito um exemplo de [#Issue](/../../issues/1) para demonstração de conhecimento.
 
 
 ## Contemplações
 
-+ Multi-modular escalável.
-+ Clean Architecture e seus testes unitários em todas camadas.
-+ Boas praticas de uso do Git. (Gitflow, Atommic commits, Semmantic commits)
++ Multi-modular escalonável.
++ Clean Architecture e seus testes unitários em todas as camadas.
++ Boas praticas de uso do Git. (GitFlow, Atomic commits, Semmantic commits)
 
 ## Futuras melhorias
 + Implementação robusta de navegação entre as features.
 + Adicionar Git Workflows para garantia da integridade e saúde do projeto.
-+ Criar repositório core-ui para criação de componentes compartilhados entre features.
++ Criar módulo core-ui para criação de componentes compartilhados entre as features.
 
 ## Arquitetura Multi-modular
 
-A arquitetura foi cuidadosamente projetada para promover um desenvolvimento saudável e escalável, permitindo a colaboração entre diversos desenvolvedores ou equipes.
+A arquitetura foi cuidadosamente projetada para promover um desenvolvimento saudável e escalonável, permitindo a colaboração entre diversos desenvolvedores ou equipes.
 
 Para garantir o sucesso dessa arquitetura, existem alguns módulos-chave:
 
-+ **Core**: Este módulo define regras e padrões que devem ser seguidos por todos os módulos e pelo cliente para a execução do projeto. Ele estabelece uma base sólida para o desenvolvimento consistente e coerente.
++ **Core**: Este módulo define regras e padrões que devem ser seguidos por todos os módulos. Ele estabelece uma base sólida para o desenvolvimento consistente e coerente.
 
-+ **Client**: Neste módulo, é estabelecida a conexão e são definidas todas as configurações necessárias para a execução das features.
++ **Client**: Neste módulo, estabelecemos as definições de estilos e configurações necessárias para a execução correta das features.
 
-+ **Navigator**: O módulo atua como um expositor de rotas entre diferentes funcionalidades do projeto. Aqui, cada equipe ou squad pode registrar as rotas que estão abertas e disponíveis para serem utilizadas por outras funcionalidades. Isso facilita a comunicação e a integração entre as partes do sistema.
++ **Navigator**: O módulo atua como um expositor de rotas. Aqui, cada equipe pode registrar as rotas que estão abertas e disponíveis para serem utilizadas por outras features. Isso facilita a comunicação e a integração entre as partes do sistema.
 
 + **Feature**: Este módulo é dedicado a cada funcionalidade específica do projeto. Aqui, cada equipe tem a liberdade de escolher o padrão de desenvolvimento que melhor se adequa à sua feature. Isso permite a personalização e a adaptação de cada funcionalidade de acordo com suas necessidades e requisitos específicos.
 
@@ -60,13 +61,13 @@ A base para escolha da arquiteturas escolhida foi a flexibilidade, ou seja este 
 
 ## Git/Github
 
-Para seguir as boas praticas atuais de desenvolvimento alguns padrões de desenvolvimento foram seguidos.
+Para seguir as boas praticas atuais de desenvolvimento, alguns padrões de desenvolvimento foram seguidos:
 
-Toda alteração no código deve vir de uma Issue aberta ou de um software de gerenciamento de tarefas.
++ Toda alteração no código deve vir de uma Issue aberta ou de um software de gerenciamento de tarefas.
 
-Os commits sempre que possíveis devem utilizar do semmantic/conventional commit pra manter uma linha clara e de fácil entendimento do que estava sendo feito através dos commits.
++ Os commits sempre devem utilizar do semmantic/conventional pra manter uma linha clara e de fácil entendimento do que estava sendo feito.
 
-Os commits sempre que possíveis devem seguir o padrão de Atomics Commit (sem deixar coisas pela metade).
++ Os commits sempre devem seguir o padrão de Atomic Commits (sem deixar coisas pela metade).
 
 ## Configurações necessárias para execução do projeto
 
@@ -100,11 +101,11 @@ android:value="ApiKEY"/>
 ## Antes de executar o projeto
 Caso for testar o aplicativo em iOS e estiver com uma máquina Apple com arquitetura **ARM**, seguir esses passos antes de inicializar o projeto:
 
-1. Abrir seu terminal
+1. Abra seu terminal
 2. Ir até a pasta do seu projeto
-3. Acessar a a pasta client
-4. Acessar pasta iOS
-5. Executar o comando
+3. Acesse a a pasta client
+4. Acesse pasta iOS
+5. Execute o comando
 
 ```bash
 arch --x86_64 pod install --repo-update
