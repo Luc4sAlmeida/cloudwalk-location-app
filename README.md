@@ -35,7 +35,7 @@ Para garantir o sucesso dessa arquitetura, existem alguns módulos-chave:
 
 + **Core**: Este módulo define regras e padrões que devem ser seguidos por todos os módulos. Ele estabelece uma base sólida para o desenvolvimento consistente e coerente.
 
-+ **Client**: Neste módulo, é estabelecida a conexão e são definidas todas as configurações necessárias para a execução das features.
++ **Client**: Neste módulo, estabelecemos as definições de estilos e configurações necessárias para a execução correta das features.
 
 + **Navigator**: O módulo atua como um expositor de rotas. Aqui, cada equipe pode registrar as rotas que estão abertas e disponíveis para serem utilizadas por outras features. Isso facilita a comunicação e a integração entre as partes do sistema.
 
