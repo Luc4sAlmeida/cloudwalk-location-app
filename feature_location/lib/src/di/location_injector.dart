@@ -1,4 +1,3 @@
-import 'package:http/http.dart' as http;
 import 'package:core/core.dart';
 import 'package:feature_location/src/src.dart';
 
@@ -9,7 +8,6 @@ class LocationInjector implements InjectorAdapter {
   }) async {
     // Core
     injector.put<Geotracker>(GeotrackerImpl());
-    injector.put<http.Client>(http.Client());
 
     // Mappers
     injector.put<LocationIPMapper>(LocationIPMapper());
