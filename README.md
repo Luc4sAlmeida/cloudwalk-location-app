@@ -1,6 +1,4 @@
 ## cloudwalk-location-app
-Este projeto é um projeto com diversos testes tanto de arquitetura de aplicativo mobile quanto de práticas técnicas.
-
 <p align="center">
   <img src="https://i.imgur.com/GWsaTdW.png">
   <img src="https://i.imgur.com/OhLB6Iq.gif">
