@@ -38,9 +38,10 @@ dependencies:
 
   core:
     path: ../core
-
   feature_home:
-      path: ../feature_home
+    path: ../feature_home
+
+  http: ^0.13.6
 
 dev_dependencies:
   flutter_test:
