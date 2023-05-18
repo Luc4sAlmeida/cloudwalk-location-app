@@ -20,7 +20,9 @@ class HomeInjector implements InjectorAdapter {
 
     // Bloc
     injector.putFactory(
-      () => HomeBloC(),
+      () => HomeBloC(
+        locationNavigator: injector.get(),
+      ),
     );
   }
 }
