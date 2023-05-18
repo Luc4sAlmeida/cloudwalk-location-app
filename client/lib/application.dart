@@ -1,6 +1,10 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
+/*
+* This is the main root of all client application
+* should be used as the first widget executed by the runApp
+ */
 class Application extends StatefulWidget {
   final List<FeatureConnector> connectors;
 
