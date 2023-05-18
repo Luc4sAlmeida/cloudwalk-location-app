@@ -38,8 +38,11 @@ dependencies:
 
   core:
     path: ../core
+
   feature_home:
     path: ../feature_home
+  feature_location:
+    path: ../feature_location
 
   http: ^0.13.6
 
