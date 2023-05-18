@@ -12,7 +12,8 @@ Para fins de apresentação, utilizei um **monorepo** com todos os repositórios
 
 A proposta da arquitetura desse projeto é dividir o máximo possível as camadas e funcionalidades, a intenção é um fluxo de trabalho melhor e sem conflitos entre times pequenos.
 
-Pelo pouco tempo para conclusão desse projeto não foi possível ser fiel ao **Gitflow** para conclusão das tarefas, sendo assim. Será feito um exemplo de Issue para demonstração de conhecimento.
+Pelo pouco tempo para conclusão desse projeto não foi possível ser fiel ao **Gitflow** para conclusão das tarefas, sendo assim. Será feito um exemplo de [#Issue](/../../issues/1) para demonstração de conhecimento.
+
 
 ## Contemplações
 
