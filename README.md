@@ -1,25 +1,31 @@
 ## cloudwalk-location-app
 Este projeto é um projeto com diversos testes tanto de arquitetura de aplicativo mobile quanto de práticas técnicas.
 
+<p align="center">
+  <img src="https://i.imgur.com/GWsaTdW.png">
+  <img src="https://i.imgur.com/OhLB6Iq.gif">
+</p>
+
 ## Nota
 
 Para fins de apresentação, utilizei um **monorepo** com todos os repositórios necessários.
 
 A proposta da arquitetura desse projeto é dividir o máximo possível as camadas e funcionalidades, a intenção é um fluxo de trabalho melhor e sem conflitos entre times pequenos.
 
+Pelo pouco tempo para conclusão desse projeto não foi possível ser fiel ao **Gitflow** para conclusão das tarefas, sendo assim. Será feito um exemplo de Issue para demonstração de conhecimento.
+
 ## Contemplações
 
-+ Multimodular escalável.
++ Multi-modular escalável.
 + Clean Architecture e seus testes unitários em todas camadas.
-+ Boas praticas de uso do Git. (Git Flow, Atommic commits, Semmantic commits)
++ Boas praticas de uso do Git. (Gitflow, Atommic commits, Semmantic commits)
 
 ## Futuras melhorias
 + Implementação robusta de navegação entre as features.
 + Adicionar Git Workflows para garantia da integridade e saúde do projeto.
 + Criar repositório core-ui para criação de componentes compartilhados entre features.
 
-
-## Arquitetura multimodular
+## Arquitetura Multi-modular
 
 A arquitetura foi cuidadosamente projetada para promover um desenvolvimento saudável e escalável, permitindo a colaboração entre diversos desenvolvedores ou equipes.
 
@@ -35,9 +41,33 @@ Para garantir o sucesso dessa arquitetura, existem alguns módulos-chave:
 
 **Imagem explicativa**: 
 
-![alt](https://i.imgur.com/2ckAEWK.png)
+![alt](https://i.imgur.com/w1mcqmg.png)
 
-## Configurações necessárias
+## Feature Home
+
+Essa feature tem como única responsabilidade navegar o usuário para **feature-location**. Nesse exemplo é possível observar como é feito a navegação de uma feature para outra.
+
+Foi utilizado um padrão de Clean Architecture, porém sem suas camadas de domínio e data, pois temos apenas visualização e execução de um único evento que não se classifica como um **usecase**.
+
+A ideia geral da feature é ser capaz de conectar diversas features diferentes e também ter suas próprias responsabilidades como por exemplo: pré-visualização de dados.
+
+## Feature Location
+
+Tem como objetivo técnico ser a feature exemplo de toda arquitetura, nela utilizamos Clean Architecture.
+
+A base para escolha da arquiteturas escolhida foi a flexibilidade, ou seja este módulo pode facilmente se adaptar a alterações (mudança de contrato, mudança completa de tela, mudança de comportamento de armazenamento de dados), outro ponto importante é que ela é facilmente testada de forma unitária nas suas principais camadas.
+
+## Git/Github
+
+Para seguir as boas praticas atuais de desenvolvimento alguns padrões de desenvolvimento foram seguidos.
+
+Toda alteração no código deve vir de uma Issue aberta ou de um software de gerenciamento de tarefas.
+
+Os commits sempre que possíveis devem utilizar do semmantic/conventional commit pra manter uma linha clara e de fácil entendimento do que estava sendo feito através dos commits.
+
+Os commits sempre que possíveis devem seguir o padrão de Atomics Commit (sem deixar coisas pela metade).
+
+## Configurações necessárias para execução do projeto
 
 Navegue até a pasta do repositório do projeto e depois acesse o seguinte arquivo:
 
@@ -78,8 +108,6 @@ Caso for testar o aplicativo em iOS e estiver com uma máquina Apple com arquite
 ```bash
 arch --x86_64 pod install --repo-update
 ```
-
-
 
 ## License
 
