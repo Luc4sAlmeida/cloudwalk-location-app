@@ -5,16 +5,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:mocktail/mocktail.dart';
+import 'package:navigator/navigator.dart';
 
 class MockNavigatorObserver extends Mock implements NavigatorObserver {}
 
 class MockRoute extends Fake implements Route {}
 
+class MockLocationNavigatorRoute extends Mock implements LocationNavigator {}
+
 void main() {
   late HomeBloC bloc;
+  late LocationNavigator mockLocationNavigator;
 
   setUp(() {
-    bloc = HomeBloC();
+    mockLocationNavigator = MockLocationNavigatorRoute();
+    bloc = HomeBloC(
+      locationNavigator: mockLocationNavigator,
+    );
     registerFallbackValue(MockRoute());
   });
 
@@ -42,6 +49,9 @@ void main() {
       'Should navigate when NavigateToLocationEvent is dispatched',
       (tester) async {
         final mockObserver = MockNavigatorObserver();
+
+        when(() => mockLocationNavigator.toRoot(someParams: 'example'))
+            .thenAnswer((invocation) async => {});
 
         await tester.pumpWidget(MaterialApp(
           navigatorObservers: [mockObserver],

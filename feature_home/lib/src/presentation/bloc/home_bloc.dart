@@ -5,6 +5,12 @@ import 'home_event.dart';
 import 'home_state.dart';
 
 class HomeBloC extends BloC<HomeEvent, HomeState> {
+  final LocationNavigator locationNavigator;
+
+  HomeBloC({
+    required this.locationNavigator,
+  });
+
   @override
   void onReady() {
     emit(HomeStableState());
@@ -13,7 +19,7 @@ class HomeBloC extends BloC<HomeEvent, HomeState> {
   @override
   void onEvent(HomeEvent event) {
     if (event is NavigateToLocationEvent) {
-      NavigatorService().toNamed(LocationPortals.root);
+      locationNavigator.toRoot(someParams: 'example');
     }
   }
 }
